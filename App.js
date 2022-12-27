@@ -6,9 +6,7 @@ import {
   AdEventType,
 } from 'react-native-google-mobile-ads';
 
-const adUnitId = __DEV__
-  ? TestIds.APP_OPEN
-  : 'ca-app-pub-xxxxxxxxxxxxx/yyyyyyyyyyyyyy';
+const adUnitId = 'ca-app-pub-xxxxxxxxxxxxx/yyyyyyyyyyyyyy';
 
 const interstitial = InterstitialAd.createForAdRequest(adUnitId, {
   requestNonPersonalizedAdsOnly: true,
@@ -34,7 +32,7 @@ const App = () => {
 
     progressInterval.current = setInterval(() => {
       setProgress(prevProgress => prevProgress + 1);
-    }, 100);
+    }, 50);
 
     timeout.current = setTimeout(() => {
       setIsLoading(false);
